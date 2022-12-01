@@ -1,0 +1,72 @@
+h1{
+    color:gray;
+    background-color: aqua;
+    margin: 0;
+}
+body{
+    padding: 10rem;
+}
+img{
+    max-width: 15rem;
+    aspect-ratio: 1 / 1;
+}
+.container{
+    width: 50%;
+    border: 5px solid yellow;
+    border-radius: 12px;
+    padding: 5rem;
+}
+.top-container
+{
+    display: flex;
+}
+.testimonial{
+    --padding:2rem;
+    position: relative;
+    background-color: antiquewhite;
+    border-radius: 12px;
+    border: 5px solid red;
+    padding: var(--padding);
+}
+
+.testimonial__name{
+    position: absolute;
+    top: var(--padding);
+    left: var(--padding);
+}
+/* .testimonial__quote{
+    position: relative;
+} */
+.testimonial__quote::before
+{
+content: open-quote;
+font-size: 10rem;
+font-family: serif;
+
+position: absolute;
+left: -3rem;
+top: -5rem;
+}
+.testimonial__quote::after{
+    content: close-quote;
+    font-size: 0rem;
+}
+
+.myprofile{
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.content-sidebar{
+    border: 3px solid red;
+    display: flex;
+    align-items: flex-start;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    background-color: hwb(221 54% 8% / 0.699);
+    border-radius: 10px;
+   
+    
+}
