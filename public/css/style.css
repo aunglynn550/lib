@@ -1,18 +1,19 @@
 
 :root{
-    --testimonial-bg-color :#555;
+    --testimonial-bg-color :hwb(221 52.2% 24.3% / 0.7);
 }
 
 
-
+body{
+    padding: 0;
+    background-color: rgb(183, 211, 210);
+}
 
 h1,h2,h3{
     margin: 0;
     padding: 0 20px 0 20px;
 }
-body{
-    padding: 0;
-}
+
 img{
     max-width: 15rem;
     aspect-ratio: 1 / 1;
@@ -85,7 +86,7 @@ top: -2rem;
 .sidebar{
     position: sticky;
     top: 0;
-    background-color: hwb(221 54% 8% / 0.699);
+    background-color: var(--testimonial-bg-color);
     border-radius: 10px;
    
     
@@ -103,11 +104,16 @@ top: -2rem;
         flex-direction: column;
     }
     body{
-        background-color: blanchedalmond;
+        background-color: rgb(181, 202, 201);
     }
 }
 
 @media (max-width : 350px) {
+
+    body{
+        background-color: rgb(150, 186, 184);
+    }
+
     .top-container{
         flex-direction: column;
     }
