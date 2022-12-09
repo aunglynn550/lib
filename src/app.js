@@ -39,28 +39,52 @@ app.get('/about', (req,res)=>{
     });
 });
 
+app.get('/products',(req,res)=>{
+    if(!req.query.search){
+      return  res.send({
+            error:'You must provide a search term'})
+    }
+    // By using return we are stopping the function execution
+    // which means the code down below doesn't run
+    console.log(req.query.search)
+    res.send({        
+        products:[]
+    })
+})
+
+app.get('/weather',(req,res)=>{
+    if(!req.query.address){
+        return res.send({
+            error:'You must provide an address!'
+        })
+    }
+    
+    res.send({
+        forecast:'it is snowing',
+        location:'Philadelphia',
+        address:req.query.address
+    })
+})
 
 
-app.get('', (req,res) => {
-    res.send('<h1>Hello</h1>')
-});
-
-app.get('/help', (req,res) => {
-    res.send([
-        {
-            name:'Ko AUng',
-            age:23
-        },{
-            name:'Sarah',
-            age:23
-        }
-    ])
-});
 
 
-// app.get('/about', (req,res) => {
-//     res.send('<h1>About</h1>')
-// });
+app.get('/help',(req,res)=>{
+    res.render('help',{
+        title:'help',
+        name:'Aunglyn',
+        helpText:'this is some helpful text'
+    });
+})
+app.get('*',(req,res)=>{
+   res.render('404',{
+    title:'404',
+    name:'Aunglyn',
+    errorMessage:'Page No Found'
+   })
+})
+
+
 app.get('/weather', (req,res) => {
     res.send([
         {
