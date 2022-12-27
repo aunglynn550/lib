@@ -1,6 +1,7 @@
 
 :root{
     --testimonial-bg-color :hwb(221 52.2% 24.3% / 0.7);
+    --button-color:black;
 }
 
 
@@ -18,10 +19,28 @@ img{
     max-width: 15rem;
     aspect-ratio: 1 / 1;
 }
+
+.nav-bar{
+    width: 50%;
+    padding: 2rem;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+}
+
 .container{
     /* width: 50%; */
     border-radius: 12px;
-    padding: 1rem;
+    padding: 2rem;
 }
 .top-container
 {
@@ -80,7 +99,7 @@ top: -2rem;
     align-items: flex-start;
 }
 .primary-content{
-    padding: 0em;
+    padding: 5em;
 }
 
 .sidebar{
@@ -99,12 +118,18 @@ top: -2rem;
     padding: 20px;
 }
 
+
+
+
 @media (max-width : 750px) {
     .top-container{
         flex-direction: column;
     }
     body{
         background-color: rgb(181, 202, 201);
+    }
+    .primary-content{
+        padding: .5em;
     }
 }
 
@@ -118,6 +143,6 @@ top: -2rem;
         flex-direction: column;
     }
     .primary-content{
-        padding: 3;
+        padding: 0;
     }
 }

@@ -38,6 +38,19 @@ app.get('/about', (req,res)=>{
         name:'AungLynn'
     });
 });
+app.get('/contact', (req,res)=>{
+    res.render('contact',{
+        title: 'About',
+        name:'AungLynn'
+    });
+});
+
+app.get('/buttons', (req,res)=>{
+    res.render('buttons');
+});
+app.get('/mask', (req,res)=>{
+    res.render('mask');
+});
 
 app.get('/products',(req,res)=>{
     if(!req.query.search){
