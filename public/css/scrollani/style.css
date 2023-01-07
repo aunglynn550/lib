@@ -1,0 +1,27 @@
+
+h1{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner{
+    width: 100%;
+    height: calc(100vh - 45px);
+    background: url(/img/black-and-white.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.box{
+    height: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4a4a4a;
+    gap: 10px;
+}

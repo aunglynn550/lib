@@ -48,8 +48,9 @@ app.get('/contact', (req,res)=>{
 app.get('/buttons', (req,res)=>{
     res.render('buttons');
 });
-app.get('/mask', (req,res)=>{
-    res.render('mask');
+
+app.get('/nav', (req,res)=>{
+    res.render('nav');
 });
 
 app.get('/products',(req,res)=>{
