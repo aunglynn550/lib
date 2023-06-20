@@ -53,6 +53,21 @@ app.get('/nav', (req,res)=>{
     res.render('nav');
 });
 
+//Themes
+
+app.get('/bohemium', (req,res)=>{
+    res.render('themes/bohemium');
+});
+
+//Cards
+
+app.get('/calidou', (req,res)=>{
+    res.render('themes/cards/calidou');
+});
+
+
+
+
 app.get('/products',(req,res)=>{
     if(!req.query.search){
       return  res.send({

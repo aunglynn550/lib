@@ -6,10 +6,12 @@
 
 
 body{
-    padding: 0;
     background-color: rgb(183, 211, 210);
+    margin: 0;
 }
-
+a{
+    text-decoration: none;
+}
 h1,h2,h3{
     margin: 0;
     padding: 0 20px 0 20px;
@@ -21,14 +23,20 @@ img{
 }
 
 .nav-bar{
-    width: 50%;
-    padding: 2rem;
+    background-color: rgb(244, 240, 240);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    margin-bottom: 1rem;
+    z-index: 1;
+    box-shadow: 0 0 0.7rem rgb(109, 109, 130);
 }
 
 .nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 1rem;
 }
 
 .nav a{
@@ -45,13 +53,12 @@ img{
 .top-container
 {
     display: flex;
-    gap: 1rem;
     flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 2rem;
 }
 .testimonial{
-    --padding:2rem; 
-    padding: var(--padding);
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,9 +67,30 @@ img{
     border-radius: 5px;
 }
 
+.content{
+    max-width: 60ch;
+    margin: 3rem 5rem 30vh;
+}
+
+.content-box{
+    background-color: white;
+    padding: 2rem;
+}
+
+.theend{
+    position: sticky;
+    z-index: -1;
+    bottom:10rem;
+    background: orange;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0 0 0.5rem rgb(0, 0, 1);
+    font-weight: bold;
+    text-align: center;
+}
 
 .testimonial__name{
-    position: absolute;
+    position: sticky;
     top: 0;
     left: var(--padding);
 }
@@ -70,6 +98,7 @@ img{
 
 .testimonial__quote{
     position: relative;
+    width: 50ch;
 }
 .testimonial__quote::before
 {
@@ -99,15 +128,16 @@ top: -2rem;
     align-items: flex-start;
 }
 .primary-content{
-    padding: 5em;
+    padding: 0 10em 0 .5rem;
+    flex: 1;
 }
 
 .sidebar{
     position: sticky;
-    top: 0;
+    top: 4rem;
     background-color: var(--testimonial-bg-color);
     border-radius: 10px;
-   
+    width: 10rem;
     
 }
 
