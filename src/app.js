@@ -59,6 +59,13 @@ app.get('/bohemium', (req,res)=>{
     res.render('themes/bohemium');
 });
 
+app.get('/jordum', (req,res)=>{
+    res.render('themes/jordum');
+});
+
+
+
+
 //Cards
 
 app.get('/calidou', (req,res)=>{
